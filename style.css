@@ -1,0 +1,172 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: #0779e4 3px solid;
+}
+
+main {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.3em;
+}
+
+/* Specific Element Styling */
+
+/* Header Elements */
+header {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #004d40; /* Dark teal */
+    color: white;
+}
+
+#apiKey {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    flex-grow: 0.5; /* Allow input to grow but not too much */
+    max-width: 300px; /* Max width for API key input */
+}
+
+#saveApiKey {
+    padding: 8px 15px;
+    background-color: #00796b; /* Teal */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+#saveApiKey:hover {
+    background-color: #004d40; /* Darker teal */
+}
+
+/* Main Content Elements */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#modelPicker,
+#promptInput {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#promptInput {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#submitPrompt {
+    display: block;
+    width: auto;
+    padding: 12px 25px;
+    background-color: #d81b60; /* Pink */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#submitPrompt:hover {
+    background-color: #ad1457; /* Darker pink */
+}
+
+#responseArea {
+    width: 95%;
+    min-height: 150px;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    white-space: pre-wrap;   /* Respect newlines and spaces */
+    word-wrap: break-word;   /* Break long words to prevent overflow */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for responses */
+    line-height: 1.5;
+}
+
+/* Layout */
+.container {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /* Clear floats */
+}
+
+/* Apply container to main content for centering and max-width */
+main {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add some spacing between elements */
+header > *, main > *, footer > * {
+    margin-bottom: 10px; /* Default spacing for direct children */
+}
+
+label, select, textarea, input, button {
+    margin-bottom: 10px; /* More specific spacing for form elements */
+}
+
+/* Remove double margin for elements that might already have it */
+h2 + label {
+    margin-top: 0.5em;
+}
+#submitPrompt + h2 {
+    margin-top: 20px;
+}
